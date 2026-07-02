@@ -1,0 +1,264 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth; /* smooth scrolling */
+}
+
+body {
+  font-family: "Helvetica Neue", sans-serif;
+  background-color: #fff;
+  color: #000;
+  line-height: 1.6;
+}
+
+/* Sections */
+section {
+  min-height: 100vh;
+  padding: 4rem;
+}
+#home {
+  min-height: 100vh; /* ensure full screen height */
+  position: relative; /* so absolute children stay inside */
+  padding: 4rem;
+}
+
+/* Sidebar Menu */
+.bar-menu {
+  position: fixed;
+  top: 50%;
+  right: 2rem;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  z-index: 1000;
+}
+
+.bar-menu a {
+  position: relative;
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+  padding-bottom: 4px;
+}
+
+.bar-menu a.active::before {
+  content: "";
+  position: absolute;
+  left: -12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 8px;
+  height: 8px;
+  background-color: #00c853; /* green dot */
+  border-radius: 50%;
+}
+
+.bar-menu a.active {
+  border-bottom: 2px solid #00c853; /* green underline */
+  color: #00c853;
+}
+
+/* Top buttons */
+.button-group {
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+  display: flex;
+  gap: 1rem;
+  z-index: 1000;
+}
+
+.button-group button {
+  background: none;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  color: #000;
+}
+
+/* Welcome text */
+.welcome h1 {
+  font-size: 2.5rem;
+  margin-top: 5rem;
+  max-width: 600px;
+}
+
+.welcome span {
+  display: block;
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  color: #555;
+}
+
+/* Bottom button */
+.bottom {
+  position: absolute;
+  bottom: 2rem;
+  left: 2rem;
+}
+
+.bottom button {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+#viewProjectBtn {
+  position: fixed; /* stays in place */
+  bottom: -100px; /* hidden below screen */
+  left: 2rem;
+  transition: bottom 0.6s ease, opacity 0.6s ease;
+  opacity: 0; /* invisible initially */
+}
+
+#viewProjectBtn {
+  bottom: 2rem; /* slides up into view */
+  opacity: 1; /* becomes visible */
+}
+
+#viewProjectBtn button {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+/* About section with Vanta background */
+#about {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  color: #000;
+}
+
+#about .header {
+  font-size: 25px;
+}
+#about h1 {
+  font-size: 25px;
+}
+
+#about .header,
+#about .welcome {
+  position: relative;
+  z-index: 2; /* text above globe */
+}
+
+#skills {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+}
+#skills .header,
+#skills p,
+#skills .container {
+  position: relative;
+  z-index: 2;
+}
+
+#skills {
+  width: auto;
+  height: auto;
+  font-size: 25px;
+  color: black;
+}
+#skills p {
+  font-size: 25px;
+  margin-left: 50px;
+}
+#skills span {
+  color: white;
+}
+
+.image-container {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  max-width: 800px;
+  margin-top: 25px;
+  margin-left: 175px;
+}
+
+.image-container img {
+  width: 100px;
+  height: 150px;
+  display: block;
+}
+
+.image-container2 {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  max-width: 800px;
+  margin-top: 25px;
+}
+
+.image-container2 img {
+  width: 100px;
+  height: 150px;
+  display: block;
+}
+
+.image-container3 {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  max-width: 800px;
+  margin-top: 25px;
+}
+
+.image-container3 img {
+  width: 100px;
+  height: 150px;
+  display: block;
+}
+
+/* Base box style */
+.box {
+  position: absolute;
+  border: 2px solid;
+  width: 150px;
+  height: 100px;
+}
+
+/* Blue box on the left */
+.blue-box {
+  border-color: blue;
+  top: 20%;
+  left: 10%;
+}
+
+/* Black boxes */
+.black-box {
+  border-color: black;
+}
+
+/* Center box */
+.box-center {
+  top: 30%;
+  left: 40%;
+}
+
+/* Right box */
+.box-right {
+  top: 40%;
+  left: 70%;
+}
+
+#project {
+  background: url(mountain\ 4k.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}

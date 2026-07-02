@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Portfolio</title>
+  </head>
+  <body>
+    <!-- Fixed Sidebar Menu -->
+    <div class="bar-menu">
+      <a href="#home" class="active">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#project">Project</a>
+      <a href="#contact">Contact</a>
+    </div>
+
+    <!-- Home Section -->
+    <section id="home">
+      <div class="header">
+        <h2>Xo<span>-Kulz.</span></h2>
+      </div>
+      <div class="button-group">
+        <a href="#"
+          ><button>let's talk <i class="fa-solid fa-arrow-right"></i></button
+        ></a>
+        <a href="#"
+          ><button><i class="fa-solid fa-bars"></i></button
+        ></a>
+      </div>
+      <div class="welcome">
+        <h1>
+          I'm Kulz,
+          <span
+            >and I'm a freelance Full Stack developer based in Cambodia</span
+          >
+        </h1>
+      </div>
+      <div class="bottom" id="viewProjectBtn">
+        <a href="#project"><button>View Project</button></a>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+      <div class="header">
+        <h2>About Me</h2>
+      </div>
+      <div class="welcome">
+        <h1>
+          My name is Kulz, and I’m a freelance Full Stack developer based in
+          Cambodia. I enjoy creating digital art and working on branding
+          projects for small businesses. In my free time, I love programming.
+        </h1>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+      <div class="header">
+        <h2>Skills</h2>
+      </div>
+      <p>HOW CAN <span>I HELP YOU ?</span></p>
+      <div class="container">
+        <img class="image-container" src="frame.png" alt="" />
+        <img class="image-container2" src="frame.png" alt="" />
+        <img class="image-container3" src="frame.png" alt="" />
+      </div>
+    </section>
+
+    <!-- Project Section -->
+    <section id="project">
+      <div class="header">
+        <h2>Projects</h2>
+      </div>
+      <p>Portfolio website, branding projects, interactive UI experiments...</p>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+      <div class="header">
+        <h2>Contact</h2>
+      </div>
+      <p>Email: kulz@example.com</p>
+    </section>
+
+    <!-- Scripts -->
+    <!-- Three.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+
+    <!-- Vanta Effects -->
+    <script src="https://cdn.jsdelivr.net/npm/vanta/dist/vanta.globe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta/dist/vanta.dots.min.js"></script>
+
+    <script>
+      VANTA.GLOBE({
+        el: "#about",
+        mouseControls: true,
+        touchControls: true,
+        gyroControls: false,
+        minHeight: 200.0,
+        minWidth: 200.0,
+        scale: 1.0,
+        scaleMobile: 1.0,
+        color: 0x0,
+        color2: 0x0,
+        size: 0.9,
+        backgroundColor: 0xffffff,
+      });
+
+      VANTA.DOTS({
+        el: "#skills", // ✅ fixed selector
+        mouseControls: true,
+        touchControls: true,
+        gyroControls: false,
+        minHeight: 200.0,
+        minWidth: 200.0,
+        scale: 1.0,
+        scaleMobile: 1.0,
+        backgroundColor:0x653e3e,
+
+        
+      });
+    </script>
+    <script src="index.js"></script>
+  </body>
+</html>
